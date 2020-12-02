@@ -11,7 +11,7 @@ for i in r:
         valid += 1
     a = matches.group(4)[min_v - 1]
     b = matches.group(4)[max_v - 1]
-    if not a == matches.group(3) and b != matches.group(3) or a != matches.group(3) and b == matches.group(3):
+    if (a == matches.group(3) and b != matches.group(3)) or (a != matches.group(3) and b == matches.group(3)):
         p2_valid += 1
 
 print(f"p1: {valid}")
